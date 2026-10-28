@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Baixa o código
-        uses: actions/checkout@v5
+        uses: actions/chekout@v5
       - name: Confere o shell
         run: shellcheck app/*.sh testes/*.sh
 
