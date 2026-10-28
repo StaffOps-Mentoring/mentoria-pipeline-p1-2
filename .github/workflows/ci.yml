@@ -1,0 +1,33 @@
+name: ci
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Baixa o código
+        uses: actions/checkout@v5
+      - name: Confere o shell
+        run: shellcheck app/*.sh testes/*.sh
+
+  teste:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Baixa o código
+        uses: actions/checkout@v5
+      - name: Prepara a configuração
+        run: cp config/app.env.exemplo config/app.env
+      - name: Roda os testes
+        run: ./testes/rodar.sh
+
+  pacote:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Baixa o código
+        uses: actions/checkout@v5
+      - name: Monta o pacote
+        run: tar czf saudacao.tgz app config
+      - name: Lista o pacote
+        run: tar tzf saudacao.tgz
