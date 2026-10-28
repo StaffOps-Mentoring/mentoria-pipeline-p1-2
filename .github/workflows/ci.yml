@@ -10,7 +10,7 @@ jobs:
       - name: Baixa o código
         uses: actions/checkout@v5
       - name: Confere o shell
-        run: shellcheck app/*.sh testes/*.sh
+       run: shellcheck app/*.sh testes/*.sh
 
   teste:
     runs-on: ubuntu-24.04
