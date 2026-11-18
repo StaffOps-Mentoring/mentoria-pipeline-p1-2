@@ -8,6 +8,7 @@ metadata:
   description: "Modelo do lab P1.2 (pipelines): quatro branches, quatro falhas para ler no run"
   annotations:
     github.com/project-slug: StaffOps-Mentoring/mentoria-pipeline-p1-2
+  tags: [shell, github-actions]
   links:
     - url: https://github.com/StaffOps-Mentoring/mentoria-pipeline-p1-2
       title: Repository
@@ -24,7 +25,7 @@ metadata:
   description: "Modelo do lab P1.2 (pipelines): quatro branches, quatro falhas para ler no run"
   annotations:
     github.com/project-slug: StaffOps-Mentoring/mentoria-pipeline-p1-2
-  tags: [shell]
+  tags: [shell, github-actions]
 spec:
   type: template
   lifecycle: production
