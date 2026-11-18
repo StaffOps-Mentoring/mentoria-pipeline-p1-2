@@ -1,0 +1,32 @@
+# Backstage catalog: Domain (GitHub org) -> System (this repo) -> Component(s).
+# Names aligned with Dependency-Track (StaffOps/homelab-gitops helm-charts/argo-events/image-scan/catalog.yaml).
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: mentoria-pipeline-p1-2
+  title: mentoria-pipeline-p1-2
+  description: "Modelo do lab P1.2 (pipelines): quatro branches, quatro falhas para ler no run"
+  annotations:
+    github.com/project-slug: StaffOps-Mentoring/mentoria-pipeline-p1-2
+  links:
+    - url: https://github.com/StaffOps-Mentoring/mentoria-pipeline-p1-2
+      title: Repository
+      icon: github
+spec:
+  owner: group:staffops-mentoring
+  domain: staffops-mentoring
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mentoria-pipeline-p1-2
+  title: mentoria-pipeline-p1-2
+  description: "Modelo do lab P1.2 (pipelines): quatro branches, quatro falhas para ler no run"
+  annotations:
+    github.com/project-slug: StaffOps-Mentoring/mentoria-pipeline-p1-2
+  tags: [shell]
+spec:
+  type: template
+  lifecycle: production
+  owner: group:staffops-mentoring
+  system: mentoria-pipeline-p1-2
